@@ -7,11 +7,11 @@ public class Calculator {
     public Calculator() {
     }
 
-    private double squareRoot(double first) {
+    public double squareRoot(double first) {
         return java.lang.Math.sqrt(first);
     }
 
-    private long factorial(int first) {
+    public long factorial(int first) {
         long result = 1;
         for (int i=1; i<=first; i++)
             result *= i;
@@ -19,11 +19,11 @@ public class Calculator {
         return result;
     }
 
-    private double naturalLog(double first) {
+    public double naturalLog(double first) {
         return java.lang.Math.log(first);
     }
 
-    private double power(double first, double second) {
+    public double power(double first, double second) {
         return java.lang.Math.pow(first, second);
     }
 
