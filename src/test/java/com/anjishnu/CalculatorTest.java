@@ -1,5 +1,7 @@
 package com.anjishnu;
 
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -9,6 +11,11 @@ import static org.junit.Assert.assertNotEquals;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CalculatorTest {
+    @BeforeClass
+    public static void beforeCalculatorClass(){
+        System.out.println("\nCalculator Class testing is about to start\n");
+    }
+
     @Test
     public void TwentyFiveSquareRootIsFive() {
         System.out.println("Checking TwentyFiveSquareRootIsFive\n");
@@ -48,7 +55,7 @@ public class CalculatorTest {
     public void naturalLogOfZeroIsNotOne() {
         System.out.println("Checking naturalLogOfZeroIsNotOne\n");
         Calculator calculator = new Calculator();
-        assertNotEquals("Error - ln(0) = 1. ",calculator.naturalLog(0f),1f,0.009);
+        assertEquals("Error - ln(0) = 1. ",calculator.naturalLog(0f),1f,0.009);
     }
 
     @Test
@@ -64,4 +71,10 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         assertNotEquals("Error - 10 ^ -1 evaluates to be 10. ",calculator.power(10f,-1f),10f,0.009);
     }
+
+    @AfterClass
+    public static void afterCalculatorClass(){
+        System.out.println("After Calculator Class Testing has finished\n");
+    }
+
 }
