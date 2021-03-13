@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.anjishnu.CalculatorTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.06 s <<< FAILURE! - in com.anjishnu.CalculatorTest
-naturalLogOfZeroIsNotOne(com.anjishnu.CalculatorTest)  Time elapsed: 0.01 s  <<< FAILURE!
-java.lang.AssertionError: Error - ln(0) = 1.  expected:<-Infinity> but was:<1.0>
-	at com.anjishnu.CalculatorTest.naturalLogOfZeroIsNotOne(CalculatorTest.java:58)
-
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.299 s - in com.anjishnu.CalculatorTest

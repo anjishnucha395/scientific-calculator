@@ -55,7 +55,7 @@ public class CalculatorTest {
     public void naturalLogOfZeroIsNotOne() {
         System.out.println("Checking naturalLogOfZeroIsNotOne\n");
         Calculator calculator = new Calculator();
-        assertEquals("Error - ln(0) = 1. ",calculator.naturalLog(0f),1f,0.009);
+        assertNotEquals("Error - ln(0) = 1. ",calculator.naturalLog(0f),1f,0.009);
     }
 
     @Test
