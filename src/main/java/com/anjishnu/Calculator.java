@@ -13,7 +13,8 @@ public class Calculator {
 
     public double squareRoot(double first) {
         double result = java.lang.Math.sqrt(first);
-        logger.info("[square root] - [Input] "+first+" [Result] "+result);
+        logger.info("[SQUARE ROOT - INPUT]  "+first);
+        logger.info("[SQUARE ROOT - RESULT]  "+result);
         return result;
     }
 
@@ -22,19 +23,23 @@ public class Calculator {
         for (int i=1; i<=first; i++)
             result *= i;
 
-        logger.info("[factorial] - [Input] "+first+" [Result] "+result);
+        logger.info("[FACTORIAL - INPUT]  "+first);
+        logger.info("[FACTORIAL - RESULT]  "+result);
+
         return result;
     }
 
     public double naturalLog(double first) {
         double result = java.lang.Math.log(first);
-        logger.info("[Natural log] - [Input] "+first+" [Result] "+result);
+        logger.info("[NATURAL LOG - INPUT]  "+first);
+        logger.info("[NATURAL LOG - RESULT]  "+result);
         return result;
     }
 
     public double power(double first, double second) {
         double result = java.lang.Math.pow(first, second);
-        logger.info("[Natural log] - [Input] "+first+" ^ "+second + " [Result] "+result);
+        logger.info("[POWER - INPUT]  "+first+" and "+second);
+        logger.info("[POWER - RESULT]  "+result);
         return result;
     }
 
@@ -50,7 +55,7 @@ public class Calculator {
                     System.out.println("\nSquare root of "+num+" is "+squareRoot(num));
 
                 } else {
-                    logger.error("Input is not a number");
+                    logger.info("[SQUARE ROOT - INPUT]  "+Double.NaN);
                     System.out.println("Your input is not a number");
                 }
                 scanner.close();
@@ -64,11 +69,12 @@ public class Calculator {
                     if(num>=0)
                         System.out.println("\nFactorial of "+num+" is "+factorial(num));
                     else {
-                        logger.error("Factorial calculation is possible only for non-negative number");
+                        logger.info("[FACTORIAL - INPUT]  "+num);
+                        logger.info("[FACTORIAL - RESULT]  Factorial calculation not possible");
                         System.out.println("\nFactorial calculation is possible only for non-negative number");
                     }
                 } else {
-                    logger.error("Input is not a number");
+                    logger.info("[FACTORIAL - INPUT]  NaN");
                     System.out.println("Your input is not a number");
                 }
                 scanner.close();
@@ -81,7 +87,7 @@ public class Calculator {
                     System.out.println("\nNatural log of "+num+" is "+naturalLog(num));
 
                 } else {
-                    logger.error("Input is not a number");
+                    logger.info("[NATURAL LOG - INPUT]  "+Double.NaN);
                     System.out.println("Your input is not a number");
                 }
                 scanner.close();
@@ -99,11 +105,11 @@ public class Calculator {
                         System.out.println("\nValue of "+x+" ^ "+b+" is "+power(x, b));
 
                     } else {
-                        logger.error("Second input is not a number");
+                        logger.info("[POWER - INPUT]  "+x+" and "+Double.NaN);
                         System.out.println("Second input is not a number");
                     }
                 } else {
-                    logger.error("First input is not a number");
+                    logger.info("[POWER - INPUT]  "+Double.NaN+" NOT GIVEN");
                     System.out.println("First input is not a number");
                 }
                 scanner.close();
