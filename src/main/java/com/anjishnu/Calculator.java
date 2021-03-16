@@ -77,6 +77,7 @@ public class Calculator {
                     logger.info("[FACTORIAL - INPUT]  NaN");
                     System.out.println("Your input is not a number");
                 }
+                
                 scanner.close();
                 break;
             case 3:
